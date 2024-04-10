@@ -82,6 +82,9 @@ abstract class KeyPair {
   ///
   Uint8List sign(Uint8List message);
 
+
+  Uint8List getSeed();
+
   ///
   ///
   /// Verify a message's signature using the public key.

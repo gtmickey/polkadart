@@ -3,7 +3,7 @@ part of polkadart_keyring;
 class EcdsaKeyPair extends KeyPair {
   late secp256k1.PublicKey _publicKey;
   late secp256k1.PrivateKey _privateKey;
-
+  late Uint8List _seed;
   @override
   int ss58Format = 42;
 
@@ -13,6 +13,7 @@ class EcdsaKeyPair extends KeyPair {
   KeyPair fromSeed(Uint8List seed) {
     _privateKey = secp256k1.PrivateKey.fromBytes(seed);
     _publicKey = _privateKey.getPublicKey();
+    _seed = seed;
     return this;
   }
 
@@ -20,6 +21,7 @@ class EcdsaKeyPair extends KeyPair {
   Future<KeyPair> fromUri(String uri, [String? password]) async {
     final seed =
         await SubstrateBip39.ecdsa.seedFromUri(uri, password: password);
+    _seed = Uint8List.fromList(_seed);
     return fromSeed(Uint8List.fromList(seed));
   }
 
@@ -121,6 +123,11 @@ class EcdsaKeyPair extends KeyPair {
   @override
   Uint8List bytes([bool compressed = true]) =>
       Uint8List.fromList(_publicKey.toBytes(compressed));
+
+  @override
+  Uint8List getSeed() {
+    return _seed;
+  }
 
   ///
   /// Returns `true` if the `KeyPair` matches with the other object.

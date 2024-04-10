@@ -3,6 +3,7 @@ part of polkadart_keyring;
 class Sr25519KeyPair extends KeyPair {
   late sr25519.PublicKey _publicKey;
   late sr25519.SecretKey _privateKey;
+  late Uint8List _seed;
 
   @override
   int ss58Format = 42;
@@ -13,6 +14,7 @@ class Sr25519KeyPair extends KeyPair {
   KeyPair fromSeed(Uint8List seed) {
     _privateKey = _extractSecretKeyFromSeed(seed);
     _publicKey = _privateKey.public();
+    _seed = seed;
     return this;
   }
 
@@ -65,7 +67,7 @@ class Sr25519KeyPair extends KeyPair {
   @override
   Future<KeyPair> fromUri(String uri, [String? password]) async {
     final (seed, secretUri) = await _fromUri(uri, password);
-
+    _seed = Uint8List.fromList(seed);
     sr25519.SecretKey secretKey = _extractSecretKeyFromSeed(seed);
 
     for (final junction in secretUri.junctions) {
@@ -157,6 +159,12 @@ class Sr25519KeyPair extends KeyPair {
   Uint8List bytes([bool compressed = true]) =>
       Uint8List.fromList(_publicKey.encode());
 
+
+  @override
+  Uint8List getSeed() {
+return _seed;
+  }
+
   ///
   /// Returns `true` if the `KeyPair` matches with the other object.
   @override
@@ -168,4 +176,6 @@ class Sr25519KeyPair extends KeyPair {
   /// Returns the hash code of the `KeyPair`.
   @override
   int get hashCode => super.hashCode;
+
+
 }
