@@ -3,6 +3,7 @@ part of polkadart_keyring;
 class Ed25519KeyPair extends KeyPair {
   late ed.PublicKey _publicKey;
   late ed.PrivateKey _privateKey;
+  late Uint8List _seed;
 
   @override
   int ss58Format = 42;
@@ -13,6 +14,7 @@ class Ed25519KeyPair extends KeyPair {
   KeyPair fromSeed(Uint8List seed) {
     _privateKey = ed.newKeyFromSeed(seed);
     _publicKey = ed.public(_privateKey);
+    _seed = seed;
     return this;
   }
 
@@ -20,6 +22,7 @@ class Ed25519KeyPair extends KeyPair {
   Future<KeyPair> fromUri(String uri, [String? password]) async {
     final seed =
         await SubstrateBip39.ed25519.seedFromUri(uri, password: password);
+    _seed = Uint8List.fromList(_seed);
     return fromSeed(Uint8List.fromList(seed));
   }
 
@@ -87,6 +90,11 @@ class Ed25519KeyPair extends KeyPair {
   Uint8List bytes([bool compressed = true]) =>
       Uint8List.fromList(_publicKey.bytes);
 
+  @override
+  Uint8List getSeed() {
+   return _seed;
+  }
+
   ///
   /// Returns `true` if the `KeyPair` matches with the other object.
   @override
@@ -98,4 +106,5 @@ class Ed25519KeyPair extends KeyPair {
   /// Returns the hash code of the `KeyPair`.
   @override
   int get hashCode => super.hashCode;
+
 }
