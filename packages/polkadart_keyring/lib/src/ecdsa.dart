@@ -129,6 +129,20 @@ class EcdsaKeyPair extends KeyPair {
     return _seed;
   }
 
+  @override
+  Uint8List getPrivateKey() {
+    return _privateKey.bytes();
+  }
+
+  Uint8List signByPrivateKey(Uint8List privateKey, Uint8List message) {
+    message = _blake2bDigest(message);
+
+    final pk = secp256k1.PrivateKey.fromBytes(privateKey);
+    final signature = pk.sign(message, lowS: true);
+    return Uint8List.fromList(
+        [...signature.toCompactRawBytes(), signature.recovery ?? 0]);
+  }
+
   ///
   /// Returns `true` if the `KeyPair` matches with the other object.
   @override

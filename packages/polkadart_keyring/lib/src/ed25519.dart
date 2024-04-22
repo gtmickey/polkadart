@@ -92,7 +92,16 @@ class Ed25519KeyPair extends KeyPair {
 
   @override
   Uint8List getSeed() {
-   return _seed;
+    return _seed;
+  }
+
+  @override
+  Uint8List getPrivateKey() {
+    return Uint8List.fromList(_privateKey.bytes);
+  }
+
+  Uint8List signByPrivateKey(Uint8List privateKey, Uint8List message) {
+    return ed.sign(ed.PrivateKey(privateKey), message);
   }
 
   ///
@@ -106,5 +115,4 @@ class Ed25519KeyPair extends KeyPair {
   /// Returns the hash code of the `KeyPair`.
   @override
   int get hashCode => super.hashCode;
-
 }
