@@ -159,10 +159,20 @@ class Sr25519KeyPair extends KeyPair {
   Uint8List bytes([bool compressed = true]) =>
       Uint8List.fromList(_publicKey.encode());
 
-
   @override
   Uint8List getSeed() {
-return _seed;
+    return _seed;
+  }
+
+  @override
+  Uint8List getPrivateKey() {
+    return Uint8List.fromList(_privateKey.encode());
+  }
+
+  Uint8List signByPrivateKey(Uint8List privateKey, Uint8List message) {
+    final pk = sr25519.SecretKey.from(
+        privateKey, List<int>.filled(32, 0, growable: false));
+    return sr25519.Sr25519.sign(pk, message).encode();
   }
 
   ///
@@ -176,6 +186,4 @@ return _seed;
   /// Returns the hash code of the `KeyPair`.
   @override
   int get hashCode => super.hashCode;
-
-
 }
