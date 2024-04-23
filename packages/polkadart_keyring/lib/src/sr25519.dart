@@ -18,6 +18,14 @@ class Sr25519KeyPair extends KeyPair {
     return this;
   }
 
+  @override
+  KeyPair fromPrivateKey(Uint8List privateKey) {
+    _privateKey = sr25519.SecretKey.from(
+        privateKey, List<int>.filled(32, 0, growable: false));
+    _publicKey = _publicKey = _privateKey.public();
+    return this;
+  }
+
   Future<List<int>> seedFromUri(String uri, [String? password]) async {
     return (await _fromUri(uri, password)).$1;
   }
@@ -169,6 +177,7 @@ class Sr25519KeyPair extends KeyPair {
     return Uint8List.fromList(_privateKey.encode());
   }
 
+  @override
   Uint8List signByPrivateKey(Uint8List privateKey, Uint8List message) {
     final pk = sr25519.SecretKey.from(
         privateKey, List<int>.filled(32, 0, growable: false));

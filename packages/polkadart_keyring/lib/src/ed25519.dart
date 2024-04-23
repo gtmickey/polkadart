@@ -32,6 +32,13 @@ class Ed25519KeyPair extends KeyPair {
   }
 
   @override
+  KeyPair fromPrivateKey(Uint8List privateKey) {
+    _privateKey = ed.PrivateKey(privateKey);
+    _publicKey = ed.public(_privateKey);
+    return this;
+  }
+
+  @override
   Uint8List sign(Uint8List message) {
     if (_isLocked) {
       throw Exception('KeyPair is locked. Unlock it before signing.');
@@ -100,6 +107,7 @@ class Ed25519KeyPair extends KeyPair {
     return Uint8List.fromList(_privateKey.bytes);
   }
 
+  @override
   Uint8List signByPrivateKey(Uint8List privateKey, Uint8List message) {
     return ed.sign(ed.PrivateKey(privateKey), message);
   }
