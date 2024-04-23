@@ -30,6 +30,13 @@ class EcdsaKeyPair extends KeyPair {
     return fromUri(uri, password);
   }
 
+  @override
+  KeyPair fromPrivateKey(Uint8List privateKey) {
+    _privateKey = secp256k1.PrivateKey.fromBytes(privateKey);
+    _publicKey = _privateKey.getPublicKey();
+    return this;
+  }
+
   /// Returns the seed of the `KeyPair` as a hex string.
   String seedHex() => secp256k1.Utilities.bytesToHex(_privateKey.bytes());
 
@@ -134,6 +141,7 @@ class EcdsaKeyPair extends KeyPair {
     return _privateKey.bytes();
   }
 
+  @override
   Uint8List signByPrivateKey(Uint8List privateKey, Uint8List message) {
     message = _blake2bDigest(message);
 

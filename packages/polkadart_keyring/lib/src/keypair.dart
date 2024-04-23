@@ -9,10 +9,13 @@ part of polkadart_keyring;
 /// Example usages are provided for each function below.
 abstract class KeyPair {
   static Ed25519KeyPair get ed25519 => Ed25519KeyPair();
+
   static Sr25519KeyPair get sr25519 => Sr25519KeyPair();
+
   static EcdsaKeyPair get ecdsa => EcdsaKeyPair();
   late int ss58Format;
   final KeyPairType keyPairType;
+
   // ignore: prefer_final_fields
   bool _isLocked = false;
 
@@ -82,11 +85,13 @@ abstract class KeyPair {
   ///
   Uint8List sign(Uint8List message);
 
-
   Uint8List getSeed();
 
-
   Uint8List getPrivateKey();
+
+  KeyPair fromPrivateKey(Uint8List privateKey);
+
+  Uint8List signByPrivateKey(Uint8List privateKey, Uint8List message);
 
   ///
   ///
