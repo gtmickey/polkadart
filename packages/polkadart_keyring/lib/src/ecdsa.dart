@@ -21,7 +21,7 @@ class EcdsaKeyPair extends KeyPair {
   Future<KeyPair> fromUri(String uri, [String? password]) async {
     final seed =
         await SubstrateBip39.ecdsa.seedFromUri(uri, password: password);
-    _seed = Uint8List.fromList(_seed);
+    _seed = Uint8List.fromList(seed);
     return fromSeed(Uint8List.fromList(seed));
   }
 
