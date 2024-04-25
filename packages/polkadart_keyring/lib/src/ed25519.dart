@@ -22,7 +22,7 @@ class Ed25519KeyPair extends KeyPair {
   Future<KeyPair> fromUri(String uri, [String? password]) async {
     final seed =
         await SubstrateBip39.ed25519.seedFromUri(uri, password: password);
-    _seed = Uint8List.fromList(_seed);
+    _seed = Uint8List.fromList(seed);
     return fromSeed(Uint8List.fromList(seed));
   }
 
