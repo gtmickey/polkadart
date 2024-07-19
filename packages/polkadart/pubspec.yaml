@@ -1,11 +1,11 @@
 name: polkadart
 description: Interfaces for interacting with Polkadot JSON RPC interface
-version: 0.4.4+2
+version: 0.4.6
 homepage: https://github.com/leonardocustodio/polkadart/tree/main/packages/polkadart
 repository: https://github.com/leonardocustodio/polkadart
 
 environment:
-  sdk: ">=3.0.1 <4.0.0"
+  sdk: ">=3.3.0 <4.0.0"
 
 dependencies:
   convert: ^3.1.1 # BSD-3-Clause

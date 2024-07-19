@@ -90,7 +90,7 @@ class HttpProvider extends Provider {
     return RpcResponse(
       id: int.tryParse(data['id'].toString()) ?? -1,
       result: data['result'],
-      error: data['error']
+      error: data['error'],
     );
   }
 

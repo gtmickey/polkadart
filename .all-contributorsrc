@@ -1,0 +1,122 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "leonardocustodio",
+      "name": "Leonardo Custodio",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5619696?v=4",
+      "profile": "https://github.com/leonardocustodio",
+      "contributions": [
+        "code",
+        "test",
+        "review",
+        "question",
+        "maintenance",
+        "example",
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "justkawal",
+      "name": "justkawal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49296873?v=4",
+      "profile": "https://kawal.dev",
+      "contributions": [
+        "code",
+        "test",
+        "review",
+        "maintenance",
+        "example",
+        "bug"
+      ]
+    },
+    {
+      "login": "Lohann",
+      "name": "Lohann Paterno Coutinho Ferreira",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4323004?v=4",
+      "profile": "http://www.lohannferreira.com.br",
+      "contributions": [
+        "code",
+        "test",
+        "review",
+        "example",
+        "bug"
+      ]
+    },
+    {
+      "login": "gabrielokura",
+      "name": "Gabriel Okura",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26012776?v=4",
+      "profile": "https://github.com/gabrielokura",
+      "contributions": [
+        "code",
+        "test",
+        "example"
+      ]
+    },
+    {
+      "login": "clangenb",
+      "name": "clangenb",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37865735?v=4",
+      "profile": "https://github.com/clangenb",
+      "contributions": [
+        "code",
+        "test",
+        "bug",
+        "question"
+      ]
+    },
+    {
+      "login": "pastre",
+      "name": "Bruno Pastre",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6251198?v=4",
+      "profile": "https://pastre.dev",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "weishirongzhen",
+      "name": "weiwei",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54241621?v=4",
+      "profile": "https://github.com/weishirongzhen",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "BurnWW",
+      "name": "Burnww",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94514135?v=4",
+      "profile": "https://github.com/BurnWW",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "avive",
+      "name": "Aviv Eyal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96002?v=4",
+      "profile": "https://avive.github.io",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "polkadart",
+  "projectOwner": "leonardocustodio"
+}

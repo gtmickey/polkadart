@@ -1,6 +1,6 @@
 # **Polkadart**
-
 [![Star on Github](https://img.shields.io/github/stars/leonardocustodio/polkadart.svg?style=flat&logo=github&colorB=deeppink&label=stars)](https://github.com/leonardocustodio/polkadart)
+[![All Contributors](https://img.shields.io/github/all-contributors/leonardocustodio/polkadart?color=ee8449&style=flat-square)](#contributors)
 [![Test Coverage](https://codecov.io/gh/leonardocustodio/polkadart/graph/badge.svg?token=HG3K4LW5UN)](https://codecov.io/gh/leonardocustodio/polkadart)
 [![Build and Tests](https://github.com/leonardocustodio/polkadart/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/leonardocustodio/polkadart/actions/workflows/tests.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-purple.svg)](https://www.apache.org/licenses/LICENSE-2.0) <!-- markdown-link-check-disable-line -->
@@ -35,9 +35,38 @@ Or if you have [Melos](https://melos.invertase.dev/~melos-latest/getting-started
 
 ## Contributors
 
-<a href="https://github.com/leonardocustodio/polkadart/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=leonardocustodio/polkadart" />
-</a>
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/leonardocustodio"><img src="https://avatars.githubusercontent.com/u/5619696?v=4?s=100" width="100px;" alt="Leonardo Custodio"/><br /><sub><b>Leonardo Custodio</b></sub></a><br /><a href="https://github.com/leonardocustodio/polkadart/commits?author=leonardocustodio" title="Code">💻</a> <a href="https://github.com/leonardocustodio/polkadart/commits?author=leonardocustodio" title="Tests">⚠️</a> <a href="https://github.com/leonardocustodio/polkadart/pulls?q=is%3Apr+reviewed-by%3Aleonardocustodio" title="Reviewed Pull Requests">👀</a> <a href="#question-leonardocustodio" title="Answering Questions">💬</a> <a href="#maintenance-leonardocustodio" title="Maintenance">🚧</a> <a href="#example-leonardocustodio" title="Examples">💡</a> <a href="https://github.com/leonardocustodio/polkadart/commits?author=leonardocustodio" title="Documentation">📖</a> <a href="https://github.com/leonardocustodio/polkadart/issues?q=author%3Aleonardocustodio" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://kawal.dev"><img src="https://avatars.githubusercontent.com/u/49296873?v=4?s=100" width="100px;" alt="justkawal"/><br /><sub><b>justkawal</b></sub></a><br /><a href="https://github.com/leonardocustodio/polkadart/commits?author=justkawal" title="Code">💻</a> <a href="https://github.com/leonardocustodio/polkadart/commits?author=justkawal" title="Tests">⚠️</a> <a href="https://github.com/leonardocustodio/polkadart/pulls?q=is%3Apr+reviewed-by%3Ajustkawal" title="Reviewed Pull Requests">👀</a> <a href="#maintenance-justkawal" title="Maintenance">🚧</a> <a href="#example-justkawal" title="Examples">💡</a> <a href="https://github.com/leonardocustodio/polkadart/issues?q=author%3Ajustkawal" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.lohannferreira.com.br"><img src="https://avatars.githubusercontent.com/u/4323004?v=4?s=100" width="100px;" alt="Lohann Paterno Coutinho Ferreira"/><br /><sub><b>Lohann Paterno Coutinho Ferreira</b></sub></a><br /><a href="https://github.com/leonardocustodio/polkadart/commits?author=Lohann" title="Code">💻</a> <a href="https://github.com/leonardocustodio/polkadart/commits?author=Lohann" title="Tests">⚠️</a> <a href="https://github.com/leonardocustodio/polkadart/pulls?q=is%3Apr+reviewed-by%3ALohann" title="Reviewed Pull Requests">👀</a> <a href="#example-Lohann" title="Examples">💡</a> <a href="https://github.com/leonardocustodio/polkadart/issues?q=author%3ALohann" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/gabrielokura"><img src="https://avatars.githubusercontent.com/u/26012776?v=4?s=100" width="100px;" alt="Gabriel Okura"/><br /><sub><b>Gabriel Okura</b></sub></a><br /><a href="https://github.com/leonardocustodio/polkadart/commits?author=gabrielokura" title="Code">💻</a> <a href="https://github.com/leonardocustodio/polkadart/commits?author=gabrielokura" title="Tests">⚠️</a> <a href="#example-gabrielokura" title="Examples">💡</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/clangenb"><img src="https://avatars.githubusercontent.com/u/37865735?v=4?s=100" width="100px;" alt="clangenb"/><br /><sub><b>clangenb</b></sub></a><br /><a href="https://github.com/leonardocustodio/polkadart/commits?author=clangenb" title="Code">💻</a> <a href="https://github.com/leonardocustodio/polkadart/commits?author=clangenb" title="Tests">⚠️</a> <a href="https://github.com/leonardocustodio/polkadart/issues?q=author%3Aclangenb" title="Bug reports">🐛</a> <a href="#question-clangenb" title="Answering Questions">💬</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://pastre.dev"><img src="https://avatars.githubusercontent.com/u/6251198?v=4?s=100" width="100px;" alt="Bruno Pastre"/><br /><sub><b>Bruno Pastre</b></sub></a><br /><a href="https://github.com/leonardocustodio/polkadart/pulls?q=is%3Apr+reviewed-by%3Apastre" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/weishirongzhen"><img src="https://avatars.githubusercontent.com/u/54241621?v=4?s=100" width="100px;" alt="weiwei"/><br /><sub><b>weiwei</b></sub></a><br /><a href="https://github.com/leonardocustodio/polkadart/commits?author=weishirongzhen" title="Code">💻</a> <a href="https://github.com/leonardocustodio/polkadart/issues?q=author%3Aweishirongzhen" title="Bug reports">🐛</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/BurnWW"><img src="https://avatars.githubusercontent.com/u/94514135?v=4?s=100" width="100px;" alt="Burnww"/><br /><sub><b>Burnww</b></sub></a><br /><a href="https://github.com/leonardocustodio/polkadart/commits?author=BurnWW" title="Code">💻</a> <a href="https://github.com/leonardocustodio/polkadart/issues?q=author%3ABurnWW" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://avive.github.io"><img src="https://avatars.githubusercontent.com/u/96002?v=4?s=100" width="100px;" alt="Aviv Eyal"/><br /><sub><b>Aviv Eyal</b></sub></a><br /><a href="https://github.com/leonardocustodio/polkadart/commits?author=avive" title="Code">💻</a> <a href="https://github.com/leonardocustodio/polkadart/issues?q=author%3Aavive" title="Bug reports">🐛</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## **License**
 
