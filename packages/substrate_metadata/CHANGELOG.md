@@ -1,3 +1,12 @@
+## 1.2.3
+- Fixes: Exception: Type not found for `MinInflation`
+
+## 1.2.2
+- Fixes `toJson()` when decoding BitArray`s
+
+## 1.2.1
+- Fixes `UnmodifiableUint8ListView` missing on newer dart versions
+
 ## 1.2.0
 - Adds support for custom signed extensions
 
