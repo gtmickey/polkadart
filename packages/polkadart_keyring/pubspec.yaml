@@ -1,6 +1,6 @@
 name: polkadart_keyring
 description: Substrate Keyring.
-version: 0.4.4
+version: 0.4.4-gate+1
 homepage: https://github.com/leonardocustodio/polkadart/tree/main/packages/polkadart_keyring
 repository: https://github.com/leonardocustodio/polkadart
 
@@ -23,3 +23,7 @@ dependencies:
 dev_dependencies:
   lints: ^2.0.0
   test: ^1.21.0
+  # Gate命令工具库
+  gate_cli:
+    version: ^2.16.6
+    hosted: https://app-ci-portal.gatexsecurity.com
