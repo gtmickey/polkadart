@@ -13,7 +13,7 @@ final class GTHTTPProvider extends Provider {
 
   @override
   Future<RpcResponse> send(String method, List<dynamic> params) async {
-    final data = await GTWeb3DartRPCClient.instance.post(
+    final data = await GTWeb3PolkadartRPCClient.instance.post(
       uri: uri,
       body: {
         'id': ++_sequence,
@@ -60,12 +60,12 @@ final class GTHTTPProvider extends Provider {
   }
 
   static bool isEnabled() {
-    return GTWeb3DartRPCClient._instance != null;
+    return GTWeb3PolkadartRPCClient._instance != null;
   }
 }
 
-abstract class GTWeb3DartRPCClient {
-  const GTWeb3DartRPCClient();
+abstract class GTWeb3PolkadartRPCClient {
+  const GTWeb3PolkadartRPCClient();
 
   Future<Map<String, dynamic>> post({
     required Uri uri,
@@ -73,13 +73,13 @@ abstract class GTWeb3DartRPCClient {
     Map<String, String> headers = const {'Content-Type': 'application/json'},
   });
 
-  static void init(GTWeb3DartRPCClient client) {
+  static void init(GTWeb3PolkadartRPCClient client) {
     _instance = client;
   }
 
-  static GTWeb3DartRPCClient? _instance;
+  static GTWeb3PolkadartRPCClient? _instance;
 
-  static GTWeb3DartRPCClient get instance {
+  static GTWeb3PolkadartRPCClient get instance {
     assert(_instance != null, 'GTWeb3DartRPCClient is not initialized');
     return _instance!;
   }
